@@ -11,7 +11,8 @@ let sp = child_process.spawn(pathToFfmpeg,
         "-i",
         process.env.video,
         "-f",
-        "-threads 2",
+        "-threads",
+        "2",
         "flv",
         process.env.youtube
     ])
