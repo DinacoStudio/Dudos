@@ -1,11 +1,13 @@
 FROM node:latest
-RUN mkdir -p /home/dinaco/dudos
-WORKDIR /home/dinaco/dudos
-RUN git clone https://github.com/DinacoStudio/Dudos.git .
+RUN mkdir -p /home/dinaco/dudos_test \
+    cd /home/dinaco/dudos_test \
+    git clone https://github.com/DinacoStudio/Dudos.git .
 
-COPY package.json /home/dinaco/dudos
+WORKDIR /home/dinaco/dudos_test
+
+COPY package.json /home/dinaco/dudos_test
 RUN npm install
 
-COPY . /home/dinaco/dudos
+COPY . /home/dinaco/dudos_test
 
 CMD ["node", "index.js"]
