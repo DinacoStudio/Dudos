@@ -19,9 +19,9 @@ sp.on("spawn", async () => {
     console.log("spawned")
 })
 
-sp.stderr.on('data', async function (data) {
-    console.log("process data " + data)
-});
+// sp.stderr.on('data', async function (data) {
+//     console.log("process data " + data)
+// });
 
 sp.on('exit', async (code) => {
     console.log("process exited with code " + code)
