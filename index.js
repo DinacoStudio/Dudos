@@ -9,7 +9,7 @@ let sp = child_process.spawn(pathToFfmpeg,
         "-stream_loop",
         "-1",
         "-i",
-        "https://hack1exe.ds1nc.ru/video.mp4",
+        process.env.video,
         "-f",
         "flv",
         process.env.youtube
@@ -19,9 +19,9 @@ sp.on("spawn", async () => {
     console.log("spawned process")
 })
 
-// sp.stderr.on('data', async function (data) {
-//     console.log("process data " + data)
-// });
+sp.stderr.on('data', async function (data) {
+    console.log("process data " + data)
+});
 
 sp.on('exit', async (code) => {
     console.log("process exited with code " + code)
