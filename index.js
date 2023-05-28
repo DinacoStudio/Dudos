@@ -16,8 +16,7 @@ let sp = child_process.spawn(pathToFfmpeg,
     ])
 
 sp.on("spawn", async () => {
-    console.log("Dudos v1.0 by Dinaco")
-    console.log("spawned")
+    console.log("spawned process")
 })
 
 // sp.stderr.on('data', async function (data) {
