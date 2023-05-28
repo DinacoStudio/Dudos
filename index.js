@@ -5,14 +5,14 @@ const child_process = require('node:child_process');
 
 let sp = child_process.spawn(pathToFfmpeg,
     [
+        "-threads",
+        "2",
         `-re`,
         "-stream_loop",
         "-1",
         "-i",
         process.env.video,
         "-f",
-        "-threads",
-        "2",
         "flv",
         process.env.youtube
     ])
