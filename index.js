@@ -29,7 +29,10 @@ if (cluster.isPrimary) {
             process.env.video,
             "-f",
             "flv",
-            process.env.youtube
+            process.env.youtube,
+            "-f",
+            "flv",
+            process.env.youtube2
         ])
 
     sp.on("spawn", async () => {
