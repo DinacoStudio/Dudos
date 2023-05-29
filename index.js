@@ -2,8 +2,8 @@ const pathToFfmpeg = require('ffmpeg-static');
 const child_process = require('node:child_process');
 const cluster = require('node:cluster');
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
-const dotenv = require('dotenv');
-dotenv.config();
+// const dotenv = require('dotenv');
+// dotenv.config();
 const hook = new Webhook("https://discord.com/api/webhooks/1112705438807502959/_FManNU0HXwNLpNPo2DIY6_d1Fp9hkDC2DUD4LuQkxn3XJ9wc6cajtFDkE2m33tHCKG7");
 
 
